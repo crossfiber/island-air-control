@@ -2515,10 +2515,17 @@
 
         revealEls.forEach(el => revealObserver.observe(el));
 
-        // Safety net: reveal all elements after 3 seconds in case observer fails
-        setTimeout(() => {
-            revealEls.forEach(el => el.classList.add('visible'));
-        }, 3000);
+        // Scroll-based fallback for reliable reveals
+        function checkReveals() {
+            revealEls.forEach(el => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight + 50) {
+                    el.classList.add('visible');
+                }
+            });
+        }
+        window.addEventListener('scroll', checkReveals, { passive: true });
+        checkReveals(); // run once on load
 
         // Animated Counters
         const counters = document.querySelectorAll('.counter');
