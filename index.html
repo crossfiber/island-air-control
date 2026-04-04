@@ -547,6 +547,7 @@
             align-items: center;
             overflow: hidden;
             background: linear-gradient(160deg, #071225 0%, #0b1a2e 30%, #0c2340 60%, #0a1628 100%);
+            padding-bottom: 80px;
         }
 
         .hero-bg-glow {
@@ -2510,9 +2511,14 @@
                     revealObserver.unobserve(entry.target);
                 }
             });
-        }, { threshold: 0.1, rootMargin: '-50px' });
+        }, { threshold: 0.02, rootMargin: '0px 0px -30px 0px' });
 
         revealEls.forEach(el => revealObserver.observe(el));
+
+        // Safety net: reveal all elements after 3 seconds in case observer fails
+        setTimeout(() => {
+            revealEls.forEach(el => el.classList.add('visible'));
+        }, 3000);
 
         // Animated Counters
         const counters = document.querySelectorAll('.counter');
