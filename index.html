@@ -26,14 +26,14 @@
     <meta name="geo.region" content="US-FL">
 
     <!-- Favicon -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%230d9488' width='100' height='100'/><text x='50' y='70' font-size='60' font-weight='bold' text-anchor='middle' fill='white' font-family='Arial'>A</text></svg>">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%230F4C5C' width='100' height='100' rx='12'/><text x='50' y='70' font-size='56' font-weight='bold' text-anchor='middle' fill='%235BC0BE' font-family='serif'>A</text></svg>">
 
     <title>Island Air Control | #1 HVAC Service in the Florida Keys | Islamorada AC Repair & Installation</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -119,17 +119,17 @@
         }
 
         :root {
-            --primary-dark: #0f172a;
-            --teal-600: #0d9488;
-            --teal-500: #14b8a6;
-            --amber: #f59e0b;
-            --light-warm: #f0fdfa;
-            --off-white: #fafaf9;
+            --primary-dark: #0F4C5C;
+            --seafoam: #5BC0BE;
+            --seafoam-dark: #3a9e9c;
+            --sand: #EAE4C2;
+            --soft-white: #F7F8F9;
+            --amber: #E8A838;
             --text-dark: #e2e8f0;
             --text-light: #475569;
-            --slate-800: #1e293b;
-            --slate-700: #334155;
-            --slate-600: #475569;
+            --slate-800: #0d3a47;
+            --slate-700: #145566;
+            --slate-600: #1a6b7a;
             --gray-200: #e2e8f0;
             --gray-100: #f1f5f9;
         }
@@ -142,7 +142,7 @@
             font-family: 'Plus Jakarta Sans', sans-serif;
             line-height: 1.6;
             color: var(--text-light);
-            background: var(--off-white);
+            background: var(--soft-white);
         }
 
         /* Headings */
@@ -166,9 +166,10 @@
 
         /* Stats/Numbers */
         .stat-number {
-            font-family: 'JetBrains Mono', monospace;
-            font-weight: 600;
-            font-size: 2.5rem;
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
+            font-size: 3rem;
+            letter-spacing: -0.02em;
         }
 
         /* Navigation */
@@ -178,15 +179,15 @@
             left: 0;
             right: 0;
             z-index: 1000;
-            background: rgba(15, 23, 42, 0.95);
+            background: rgba(247, 248, 249, 0.95);
             backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(13, 148, 136, 0.1);
+            border-bottom: 1px solid rgba(15, 76, 92, 0.1);
             transition: all 0.3s ease;
         }
 
         header.scrolled {
-            background: rgba(15, 23, 42, 0.98);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            background: rgba(247, 248, 249, 0.98);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
         }
 
         .nav-container {
@@ -221,7 +222,7 @@
         }
 
         nav a {
-            color: var(--text-dark);
+            color: var(--primary-dark);
             text-decoration: none;
             font-weight: 500;
             font-size: 0.95rem;
@@ -230,7 +231,7 @@
         }
 
         nav a:hover {
-            color: var(--teal-500);
+            color: var(--seafoam-dark);
         }
 
         nav a::after {
@@ -240,7 +241,7 @@
             left: 0;
             width: 0;
             height: 2px;
-            background: var(--amber);
+            background: var(--seafoam);
             transition: width 0.3s ease;
         }
 
@@ -255,7 +256,7 @@
         }
 
         .phone-nav {
-            color: var(--text-dark);
+            color: var(--primary-dark);
             text-decoration: none;
             font-weight: 600;
             display: flex;
@@ -265,16 +266,16 @@
         }
 
         .phone-nav:hover {
-            color: var(--teal-500);
+            color: var(--seafoam-dark);
         }
 
         .cta-button {
-            background: linear-gradient(135deg, var(--teal-600) 0%, var(--teal-500) 100%);
-            color: white;
+            background: var(--seafoam);
+            color: var(--primary-dark);
             padding: 0.75rem 1.5rem;
             border-radius: 8px;
             text-decoration: none;
-            font-weight: 600;
+            font-weight: 700;
             transition: all 0.3s ease;
             border: none;
             cursor: pointer;
@@ -284,14 +285,16 @@
 
         .cta-button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(13, 148, 136, 0.3);
+            background: var(--seafoam-dark);
+            color: white;
+            box-shadow: 0 8px 24px rgba(91, 192, 190, 0.35);
         }
 
         .menu-toggle {
             display: none;
             background: none;
             border: none;
-            color: var(--text-dark);
+            color: var(--primary-dark);
             font-size: 1.5rem;
             cursor: pointer;
             z-index: 1001;
@@ -325,7 +328,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 1.5rem;
-            border-bottom: 1px solid rgba(13, 148, 136, 0.2);
+            border-bottom: 1px solid rgba(91, 192, 190, 0.2);
         }
 
         .mobile-menu-logo {
@@ -356,14 +359,14 @@
         .mobile-menu nav a {
             color: var(--text-dark);
             padding: 1rem 1.5rem;
-            border-bottom: 1px solid rgba(13, 148, 136, 0.1);
+            border-bottom: 1px solid rgba(91, 192, 190, 0.1);
             font-size: 1rem;
         }
 
         .mobile-menu-cta {
             padding: 1rem;
             margin-top: auto;
-            border-top: 1px solid rgba(13, 148, 136, 0.2);
+            border-top: 1px solid rgba(91, 192, 190, 0.2);
         }
 
         .mobile-menu-cta .cta-button {
@@ -411,14 +414,14 @@
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--slate-800) 100%);
-            color: var(--text-dark);
-            padding: 120px 2rem 80px;
+            background: url('https://crossfiber.github.io/island-air-control/hero-bg.jpg') center center / cover no-repeat;
+            color: white;
+            padding: 140px 2rem 100px;
             text-align: center;
             position: relative;
             overflow: hidden;
             margin-top: 70px;
-            min-height: 600px;
+            min-height: 650px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -428,17 +431,35 @@
         .hero::before {
             content: '';
             position: absolute;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle at 20% 50%, rgba(13, 148, 136, 0.1) 0%, transparent 50%);
-            animation: float 20s ease-in-out infinite;
-            top: 0;
-            left: 0;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(15, 76, 92, 0.82) 0%, rgba(13, 58, 71, 0.92) 100%);
+            z-index: 1;
         }
 
-        @keyframes float {
-            0%, 100% { transform: translateY(0) translateX(0); }
-            50% { transform: translateY(-30px) translateX(20px); }
+        /* AC Broken typing element */
+        .ac-broken {
+            display: inline-block;
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
+            font-size: clamp(2.75rem, 9vw, 5rem);
+            color: var(--sand);
+            margin-bottom: 0.75rem;
+            position: relative;
+            letter-spacing: -0.02em;
+        }
+
+        .ac-broken .cursor {
+            display: inline-block;
+            width: 3px;
+            height: 0.85em;
+            background: var(--seafoam);
+            margin-left: 4px;
+            animation: blink 1s step-end infinite;
+            vertical-align: text-bottom;
+        }
+
+        @keyframes blink {
+            50% { opacity: 0; }
         }
 
         .hero-content {
@@ -456,9 +477,9 @@
 
         .hero-subtitle {
             font-size: 1.25rem;
-            color: var(--gray-200);
+            color: rgba(234, 228, 194, 0.9);
             margin-bottom: 2rem;
-            line-height: 1.5;
+            line-height: 1.6;
         }
 
         .hero-cta-group {
@@ -476,13 +497,13 @@
 
         .cta-button-secondary {
             background: transparent;
-            border: 2px solid var(--teal-500);
-            color: var(--teal-500);
+            border: 2px solid var(--sand);
+            color: var(--sand);
         }
 
         .cta-button-secondary:hover {
-            background: var(--teal-500);
-            color: white;
+            background: var(--sand);
+            color: var(--primary-dark);
         }
 
         .hero-badges {
@@ -492,7 +513,7 @@
             flex-wrap: wrap;
             margin-top: 2rem;
             font-size: 0.9rem;
-            color: var(--gray-200);
+            color: rgba(255, 255, 255, 0.85);
         }
 
         .hero-badge {
@@ -502,7 +523,7 @@
         }
 
         .hero-badge i {
-            color: var(--amber);
+            color: var(--sand);
             font-size: 1.1rem;
         }
 
@@ -513,7 +534,7 @@
             left: 0;
             width: 100%;
             height: 100px;
-            background: var(--off-white);
+            background: var(--soft-white);
         }
 
         .wave-divider svg {
@@ -549,11 +570,11 @@
 
         .stat-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(13, 148, 136, 0.15);
+            box-shadow: 0 15px 40px rgba(91, 192, 190, 0.15);
         }
 
         .stat-card .stat-number {
-            color: var(--teal-600);
+            color: var(--primary-dark);
             display: block;
             margin-bottom: 0.5rem;
         }
@@ -566,13 +587,13 @@
 
         .stat-card-icon {
             font-size: 2rem;
-            color: var(--amber);
+            color: var(--seafoam);
             margin-bottom: 1rem;
         }
 
         /* About Section */
         .about {
-            background: var(--light-warm);
+            background: var(--sand);
             padding: 80px 2rem;
         }
 
@@ -610,7 +631,7 @@
         }
 
         .feature-item i {
-            color: var(--teal-600);
+            color: var(--seafoam-dark);
             font-size: 1.5rem;
             flex-shrink: 0;
             margin-top: 0.25rem;
@@ -633,13 +654,13 @@
         }
 
         .about-image {
-            background: linear-gradient(135deg, var(--teal-600) 0%, var(--teal-500) 100%);
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--slate-700) 100%);
             border-radius: 16px;
             height: 400px;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
+            color: var(--seafoam);
             font-size: 4rem;
         }
 
@@ -679,7 +700,7 @@
 
         .service-card {
             background: var(--slate-800);
-            border: 1px solid rgba(13, 148, 136, 0.2);
+            border: 1px solid rgba(91, 192, 190, 0.15);
             border-radius: 12px;
             padding: 2.5rem;
             transition: all 0.3s ease;
@@ -694,7 +715,7 @@
             left: 0;
             right: 0;
             height: 4px;
-            background: linear-gradient(90deg, var(--teal-600) 0%, var(--teal-500) 100%);
+            background: linear-gradient(90deg, var(--seafoam) 0%, var(--sand) 100%);
             transform: scaleX(0);
             transform-origin: left;
             transition: transform 0.3s ease;
@@ -706,20 +727,20 @@
 
         .service-card:hover {
             transform: translateY(-8px);
-            border-color: var(--teal-500);
-            box-shadow: 0 12px 40px rgba(13, 148, 136, 0.2);
+            border-color: var(--seafoam);
+            box-shadow: 0 12px 40px rgba(91, 192, 190, 0.2);
         }
 
         .service-icon {
             width: 70px;
             height: 70px;
-            background: linear-gradient(135deg, var(--teal-600) 0%, var(--teal-500) 100%);
+            background: linear-gradient(135deg, var(--seafoam-dark) 0%, var(--seafoam) 100%);
             border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 2rem;
-            color: white;
+            color: var(--primary-dark);
             margin-bottom: 1.5rem;
         }
 
@@ -742,7 +763,7 @@
 
         /* Equipment Section */
         .equipment {
-            background: var(--light-warm);
+            background: var(--soft-white);
             padding: 80px 2rem;
         }
 
@@ -772,7 +793,7 @@
         }
 
         .equipment-category h3 {
-            color: var(--teal-600);
+            color: var(--primary-dark);
             margin-bottom: 1.5rem;
             display: flex;
             align-items: center;
@@ -780,7 +801,7 @@
         }
 
         .equipment-category i {
-            color: var(--amber);
+            color: var(--seafoam);
         }
 
         .equipment-category ul {
@@ -822,38 +843,38 @@
             align-items: center;
             justify-content: center;
             height: 80px;
-            background: var(--off-white);
+            background: var(--sand);
             border-radius: 8px;
             padding: 1rem;
             font-weight: 600;
-            color: var(--text-light);
-            border: 1px solid var(--gray-200);
+            color: var(--primary-dark);
+            border: 1px solid rgba(234, 228, 194, 0.6);
             text-align: center;
             font-size: 0.9rem;
         }
 
         /* CTA Banner */
         .cta-banner {
-            background: linear-gradient(135deg, var(--teal-600) 0%, var(--teal-500) 100%);
+            background: linear-gradient(135deg, var(--seafoam-dark) 0%, var(--seafoam) 100%);
             padding: 60px 2rem;
             text-align: center;
-            color: white;
+            color: var(--primary-dark);
         }
 
         .cta-banner h2 {
-            color: white;
+            color: var(--primary-dark);
             margin-bottom: 1.5rem;
         }
 
         .cta-banner p {
             font-size: 1.1rem;
             margin-bottom: 2rem;
-            color: rgba(255, 255, 255, 0.95);
+            color: rgba(15, 76, 92, 0.85);
         }
 
         .cta-banner .cta-button {
-            background: var(--amber);
-            color: var(--primary-dark);
+            background: var(--primary-dark);
+            color: white;
             font-weight: 700;
         }
 
@@ -886,13 +907,13 @@
             background: var(--slate-800);
             padding: 2.5rem;
             border-radius: 12px;
-            border: 1px solid rgba(13, 148, 136, 0.2);
+            border: 1px solid rgba(91, 192, 190, 0.15);
             transition: all 0.3s ease;
         }
 
         .testimonial-card:hover {
-            border-color: var(--teal-500);
-            box-shadow: 0 8px 30px rgba(13, 148, 136, 0.15);
+            border-color: var(--seafoam);
+            box-shadow: 0 8px 30px rgba(91, 192, 190, 0.15);
         }
 
         .testimonial-stars {
@@ -910,14 +931,14 @@
         }
 
         .testimonial-author {
-            color: var(--teal-500);
+            color: var(--seafoam);
             font-weight: 600;
             font-family: 'Sora', sans-serif;
         }
 
         /* FAQ Section */
         .faq {
-            background: var(--light-warm);
+            background: var(--sand);
             padding: 80px 2rem;
         }
 
@@ -942,8 +963,8 @@
         }
 
         .faq-item.active {
-            border-color: var(--teal-600);
-            box-shadow: 0 8px 24px rgba(13, 148, 136, 0.1);
+            border-color: var(--seafoam);
+            box-shadow: 0 8px 24px rgba(91, 192, 190, 0.1);
         }
 
         .faq-question {
@@ -964,17 +985,17 @@
         }
 
         .faq-item.active .faq-question {
-            background: var(--light-warm);
-            color: var(--teal-600);
+            background: rgba(234, 228, 194, 0.3);
+            color: var(--primary-dark);
         }
 
         .faq-question:hover {
-            color: var(--teal-600);
+            color: var(--seafoam-dark);
         }
 
         .faq-toggle {
             font-size: 1.3rem;
-            color: var(--teal-600);
+            color: var(--seafoam-dark);
             transition: transform 0.3s ease;
             flex-shrink: 0;
             margin-left: 1rem;
@@ -1026,7 +1047,7 @@
             background: var(--slate-800);
             padding: 2.5rem;
             border-radius: 12px;
-            border: 1px solid rgba(13, 148, 136, 0.2);
+            border: 1px solid rgba(91, 192, 190, 0.15);
         }
 
         .form-group {
@@ -1045,7 +1066,7 @@
         .form-group textarea {
             width: 100%;
             padding: 0.875rem;
-            border: 1px solid rgba(13, 148, 136, 0.3);
+            border: 1px solid rgba(91, 192, 190, 0.25);
             border-radius: 8px;
             background: rgba(255, 255, 255, 0.05);
             color: var(--text-dark);
@@ -1057,9 +1078,9 @@
         .form-group input:focus,
         .form-group textarea:focus {
             outline: none;
-            border-color: var(--teal-500);
+            border-color: var(--seafoam);
             background: rgba(255, 255, 255, 0.08);
-            box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.1);
+            box-shadow: 0 0 0 3px rgba(91, 192, 190, 0.1);
         }
 
         .form-group textarea {
@@ -1074,13 +1095,13 @@
         }
 
         .contact-submit {
-            background: linear-gradient(135deg, var(--teal-600) 0%, var(--teal-500) 100%);
-            color: white;
+            background: var(--seafoam);
+            color: var(--primary-dark);
             padding: 1rem 2rem;
             border: none;
             border-radius: 8px;
             font-family: 'Plus Jakarta Sans', sans-serif;
-            font-weight: 600;
+            font-weight: 700;
             cursor: pointer;
             transition: all 0.3s ease;
             font-size: 0.95rem;
@@ -1089,7 +1110,9 @@
 
         .contact-submit:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(13, 148, 136, 0.3);
+            background: var(--seafoam-dark);
+            color: white;
+            box-shadow: 0 8px 24px rgba(91, 192, 190, 0.3);
         }
 
         .contact-info {
@@ -1102,11 +1125,11 @@
             background: var(--slate-800);
             padding: 1.5rem;
             border-radius: 12px;
-            border: 1px solid rgba(13, 148, 136, 0.2);
+            border: 1px solid rgba(91, 192, 190, 0.15);
         }
 
         .contact-info-title {
-            color: var(--teal-500);
+            color: var(--seafoam);
             font-family: 'Sora', sans-serif;
             font-weight: 600;
             margin-bottom: 0.75rem;
@@ -1116,7 +1139,7 @@
         }
 
         .contact-info-title i {
-            color: var(--amber);
+            color: var(--sand);
             font-size: 1.2rem;
         }
 
@@ -1127,13 +1150,13 @@
         }
 
         .contact-info-text a {
-            color: var(--teal-500);
+            color: var(--seafoam);
             text-decoration: none;
             transition: color 0.3s ease;
         }
 
         .contact-info-text a:hover {
-            color: var(--amber);
+            color: var(--sand);
         }
 
         @media (max-width: 768px) {
@@ -1148,8 +1171,8 @@
 
         /* Footer */
         footer {
-            background: rgba(15, 23, 42, 0.8);
-            border-top: 1px solid rgba(13, 148, 136, 0.1);
+            background: var(--slate-800);
+            border-top: 1px solid rgba(91, 192, 190, 0.1);
             padding: 2rem;
             text-align: center;
             color: var(--gray-200);
@@ -1186,7 +1209,7 @@
         }
 
         .footer-cert i {
-            color: var(--amber);
+            color: var(--seafoam);
         }
 
         /* Animations */
@@ -1422,8 +1445,9 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-content fade-in-up">
-            <h1>Cool Comfort for the Florida Keys</h1>
-            <p class="hero-subtitle">Premium HVAC services, repairs, and installations. 24/7 emergency service. Family-owned since 2011.</p>
+            <div class="ac-broken"><span id="typing-text"></span><span class="cursor"></span></div>
+            <h1>We'll Fix It. Fast.</h1>
+            <p class="hero-subtitle">Premium HVAC services, repairs, and installations for the Florida Keys. 24/7 emergency service. Family-owned since 2011.</p>
 
             <div class="hero-cta-group">
                 <a href="#contact" class="cta-button">Get Free Estimate</a>
@@ -1450,7 +1474,7 @@
 
         <div class="wave-divider">
             <svg viewBox="0 0 1200 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0,50 Q300,0 600,50 T1200,50 L1200,120 L0,120 Z" fill="#f0fdfa"/>
+                <path d="M0,50 Q300,0 600,50 T1200,50 L1200,120 L0,120 Z" fill="#F7F8F9"/>
             </svg>
         </div>
     </section>
@@ -1948,7 +1972,7 @@
                 </div>
             </div>
 
-            <p style="margin-top: 1.5rem; border-top: 1px solid rgba(13, 148, 136, 0.2); padding-top: 1.5rem;">
+            <p style="margin-top: 1.5rem; border-top: 1px solid rgba(91, 192, 190, 0.2); padding-top: 1.5rem;">
                 &copy; 2024 Island Air Control, LLC. All rights reserved. FL License #CAC1816937 | Monroe County #107157
             </p>
         </div>
@@ -2072,6 +2096,39 @@
     </script>
 
     <script>
+        // AC Broken? Typing Animation
+        (function() {
+            const phrases = ['AC Broken?', 'No Cool Air?', 'Need Repairs?', 'Hot Inside?'];
+            const typingEl = document.getElementById('typing-text');
+            let phraseIndex = 0;
+            let charIndex = 0;
+            let isDeleting = false;
+
+            function type() {
+                const current = phrases[phraseIndex];
+                if (!isDeleting) {
+                    typingEl.textContent = current.substring(0, charIndex + 1);
+                    charIndex++;
+                    if (charIndex === current.length) {
+                        setTimeout(() => { isDeleting = true; type(); }, 2200);
+                        return;
+                    }
+                    setTimeout(type, 90);
+                } else {
+                    typingEl.textContent = current.substring(0, charIndex - 1);
+                    charIndex--;
+                    if (charIndex === 0) {
+                        isDeleting = false;
+                        phraseIndex = (phraseIndex + 1) % phrases.length;
+                        setTimeout(type, 400);
+                        return;
+                    }
+                    setTimeout(type, 50);
+                }
+            }
+            type();
+        })();
+
         // Mobile Menu Toggle
         const menuToggle = document.getElementById('menu-toggle');
         const mobileMenu = document.getElementById('mobile-menu');
