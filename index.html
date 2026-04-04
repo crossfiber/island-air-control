@@ -200,14 +200,14 @@
         }
 
         .logo {
-            font-family: 'Sora', sans-serif;
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--teal-500);
             text-decoration: none;
             display: flex;
             align-items: center;
-            gap: 0.5rem;
+        }
+
+        .logo img {
+            height: 45px;
+            width: auto;
         }
 
         .logo i {
@@ -329,10 +329,13 @@
         }
 
         .mobile-menu-logo {
-            font-family: 'Sora', sans-serif;
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: var(--teal-500);
+            display: flex;
+            align-items: center;
+        }
+
+        .mobile-menu-logo img {
+            height: 40px;
+            width: auto;
         }
 
         .mobile-menu-close {
@@ -1159,11 +1162,12 @@
         }
 
         .footer-logo {
-            color: var(--teal-500);
-            font-family: 'Sora', sans-serif;
-            font-weight: 700;
             margin-bottom: 1rem;
-            font-size: 1.25rem;
+        }
+
+        .footer-logo img {
+            height: 50px;
+            width: auto;
         }
 
         .footer-certifications {
@@ -1221,6 +1225,133 @@
             padding: 0 2rem;
         }
 
+        /* Comprehensive Mobile Styles */
+        @media (max-width: 480px) {
+            .hero {
+                padding: 100px 1.25rem 70px;
+                min-height: 500px;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+                text-align: center;
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
+                text-align: center;
+                padding: 0 0.5rem;
+            }
+
+            .hero-cta-group {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .hero-cta-group .cta-button {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .hero-badges {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
+            }
+
+            .stats-wrapper {
+                padding: 0 1rem;
+                margin-top: -40px;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 1rem;
+            }
+
+            .stat-card {
+                padding: 1.25rem 0.75rem;
+            }
+
+            .stat-number {
+                font-size: 2rem;
+            }
+
+            .about-section {
+                padding: 60px 1.25rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .about-features {
+                grid-template-columns: 1fr;
+            }
+
+            .services {
+                padding: 60px 1.25rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 1.25rem;
+            }
+
+            .service-card {
+                padding: 1.75rem;
+            }
+
+            .equipment {
+                padding: 60px 1.25rem;
+            }
+
+            .equipment-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .certs-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 0.75rem;
+            }
+
+            .cta-banner {
+                padding: 40px 1.25rem;
+            }
+
+            .cta-banner h2 {
+                font-size: 1.5rem;
+            }
+
+            .testimonials {
+                padding: 60px 1.25rem;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .faq-section {
+                padding: 60px 1.25rem;
+            }
+
+            .contact-section {
+                padding: 60px 1.25rem;
+            }
+
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+
+            h2 {
+                font-size: 1.75rem;
+            }
+
+            .logo img {
+                height: 38px;
+            }
+        }
+
         .visually-hidden {
             position: absolute;
             width: 1px;
@@ -1239,8 +1370,7 @@
     <header id="header">
         <div class="nav-container">
             <a href="#home" class="logo">
-                <i class="fas fa-leaf"></i>
-                Island Air
+                <img src="https://i0.wp.com/www.islandaircontrol.com/wp-content/uploads/2015/09/islandair-logo.png" alt="Island Air Control - HVAC Services Florida Keys">
             </a>
 
             <nav id="nav-menu">
@@ -1270,7 +1400,7 @@
     <div class="mobile-menu" id="mobile-menu">
         <div class="mobile-menu-header">
             <div class="mobile-menu-logo">
-                <i class="fas fa-leaf"></i> Island Air
+                <img src="https://i0.wp.com/www.islandaircontrol.com/wp-content/uploads/2015/09/islandair-logo.png" alt="Island Air Control">
             </div>
             <button class="mobile-menu-close" id="mobile-menu-close">
                 <i class="fas fa-times"></i>
@@ -1800,7 +1930,7 @@
     <!-- Footer -->
     <footer>
         <div class="footer-content">
-            <div class="footer-logo">Island Air Control, LLC</div>
+            <div class="footer-logo"><img src="https://i0.wp.com/www.islandaircontrol.com/wp-content/uploads/2015/09/islandair-logo.png" alt="Island Air Control, LLC"></div>
             <p>Premium HVAC Services | Florida Keys</p>
 
             <div class="footer-certifications">
